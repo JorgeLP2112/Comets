@@ -4,11 +4,19 @@ import { useSession, signIn, signOut } from "next-auth/react";
 export default function Home() {
   const { data: session, status: loading } = useSession();
 
+  const startTour = () => {
+    if (loading === "authenticated") {
+      window.location.href = "/CDITGVirtualTour.html";
+    } else {
+      signIn();
+    }
+  };
+
   return (
     <div>
-      <Link href="/CDITGVirtualTour.html">
-        <button type="button">START</button>
-      </Link>
+      <button type="button" onClick={startTour}>
+        START
+      </button>
       {loading === "loading" && <p>Cargando...</p>}
       {loading === "unauthenticated" && (
         <button onClick={() => signIn()}>Iniciar sesión</button>
