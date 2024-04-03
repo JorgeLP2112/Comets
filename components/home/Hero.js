@@ -1,4 +1,16 @@
+import { useSession, signIn, signOut } from "next-auth/react";
+
 export default function Hero() {
+  const { data: session, status: loading } = useSession();
+
+  const startTour = () => {
+    if (loading === "authenticated") {
+      window.location.href = "/CDITGVirtualTour.html";
+    } else {
+      signIn();
+    }
+  };
+
   return (
     <section id="hero" className="relative">
       <div className="bg-header-mobile bg-custom-mobile-header-size absolute w-full h-full bg-no-repeat lg:hidden"></div>
@@ -15,7 +27,10 @@ export default function Hero() {
               where they will be working and where they can find the rest of the
               team. Simple, easy, and most importantly, efficient.
             </p>
-            <button className="bg-yellow px-7 py-3 rounded-full text-black text-xs bg-gradient-to-r from-yellow to-red-dark hover:button-brightness mb-7 focus:outline-none focus:ring ring-yellow-400 font-semibold">
+            <button
+              className="bg-yellow px-7 py-3 rounded-full text-black text-xs bg-gradient-to-r from-yellow to-red-dark hover:button-brightness mb-7 focus:outline-none focus:ring ring-yellow-400 font-semibold"
+              onClick={startTour}
+            >
               START
             </button>
           </div>

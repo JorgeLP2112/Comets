@@ -7,7 +7,7 @@ export const authOptions = {
     CredentialsProvider({
       name: "Credentials",
       credentials: {
-        username: { label: "Username", type: "text", placeholder: "worker1" },
+        username: { label: "Username", type: "text", placeholder: "user" },
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
