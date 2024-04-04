@@ -28,7 +28,7 @@ export default function Hero() {
               sobre la empresa.
             </p>
             <button
-              className="hidden lg:block text-neutral-black text-lg hover:border-black border-b-2 border-transparent transition duration-500 ease-in-out focus:outline-none font-semibold italic"
+              className="text-neutral-black text-lg hover:border-black border-b-2 border-transparent transition duration-500 ease-in-out focus:outline-none font-semibold italic"
               onClick={startTour}
             >
               Iniciar Tour

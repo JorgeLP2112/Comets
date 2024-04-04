@@ -44,7 +44,7 @@ module.exports = {
       }),
       backgroundSize: {
         "custom-mobile-header-size": "100% auto",
-        "custom-mobile-mockup-size": "80% auto",
+        "custom-mobile-mockup-size": "75% auto",
       },
       container: {
         center: true,
