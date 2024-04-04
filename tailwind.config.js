@@ -38,13 +38,13 @@ module.exports = {
         },
       },
       backgroundImage: (theme) => ({
-        "header-desktop": "url('/img/bg-intro-desktop.svg')",
-        "header-mobile": "url('/img/bg-intro-mobile.svg')",
-        "image-mockups": "url('/img/image-mockups.png')",
+        "header-desktop": "url('/img/astrazenec-logo.png')",
+        "header-mobile": "url('/img/astrazenec-logo.png')",
+        "image-mockups": "url('/img/astrazeneca-logo.png')",
       }),
       backgroundSize: {
-        "custom-mobile-header-size": "100% 50%",
-        "custom-mobile-mockup-size": "auto 60%",
+        "custom-mobile-header-size": "100% auto",
+        "custom-mobile-mockup-size": "80% auto",
       },
       container: {
         center: true,
