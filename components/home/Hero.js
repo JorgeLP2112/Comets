@@ -5,7 +5,7 @@ export default function Hero() {
 
   const startTour = () => {
     if (loading === "authenticated") {
-      window.location.href = "/CDITGVirtualTour.html";
+      window.location.href = "/VirtualTour.html";
     } else {
       signIn();
     }
